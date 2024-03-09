@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/media/devooty/New Volume/vimprojects/gymtracker/build",
-  "command": "/usr/bin/c++    -o CMakeFiles/gym.dir/main.cpp.o -c \"/media/devooty/New Volume/vimprojects/gymtracker/main.cpp\"",
-  "file": "/media/devooty/New Volume/vimprojects/gymtracker/main.cpp"
-}
-]
