@@ -15,6 +15,10 @@ class meso{
 		    sessions = workdays;
 		    type = init; 
 		    length = curlen; 
-	    }
+	    };
+	    std::vector<session> get_sessions();
+	    void edit_session(int date, session replacement); 
+	    int get_length();
+	    cycle get_cycle();
 };
 
