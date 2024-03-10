@@ -1,3 +1,0 @@
-/media/devooty/New Volume/vimprojects/gymtracker/build/CMakeFiles/gym.dir
-/media/devooty/New Volume/vimprojects/gymtracker/build/CMakeFiles/edit_cache.dir
-/media/devooty/New Volume/vimprojects/gymtracker/build/CMakeFiles/rebuild_cache.dir
