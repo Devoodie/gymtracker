@@ -1,5 +1,7 @@
 #include "session.h"
 #include <vector>
+#include <string> 
+
 
 enum cycle{
 	cut, maint, bulk
@@ -8,17 +10,22 @@ enum cycle{
 class meso{
 	cycle type;
 	std::vector<session> sessions;
-	int length;
+	std::string length;
 
 	public:
-	    meso(cycle init, std::vector<session> workdays, int curlen){
+	    meso(cycle init, std::vector<session> workdays, std::string curlen){
 		    sessions = workdays;
 		    type = init; 
 		    length = curlen; 
 	    };
 	    std::vector<session> get_sessions();
-	    void edit_session(int date, session replacement); 
+	    void append_session(session today); 
+	    void edit_session(std::string date, std::vector<session>); 
+
+
 	    int get_length();
+
 	    cycle get_cycle();
+	    void set_cycle();
 };
 
