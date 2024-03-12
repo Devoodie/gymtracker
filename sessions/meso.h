@@ -1,6 +1,5 @@
 #include "session.h"
 #include <vector>
-#include <string> 
 
 
 enum cycle{
@@ -20,7 +19,7 @@ class meso{
 	    };
 	    std::vector<session> get_sessions();
 	    void append_session(session today); 
-	    void edit_session(std::string date, std::vector<session>); 
+	    void edit_session(std::string date, session ammend); 
 
 
 	    int get_length();

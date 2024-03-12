@@ -1,6 +1,6 @@
 #include "exer.h"
-
+#include <string>
 struct session{
 	std::vector<exercise> lifts; 
-	int date;
+	std::string date;
 };
