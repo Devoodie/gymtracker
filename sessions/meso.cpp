@@ -25,17 +25,62 @@ int meso::get_length(){
 	    year1 = std::stoi(this->sessions[0].date.substr(4,5)),
 	    month2 = std::stoi(this->sessions[this->sessions.size()-1].date.substr(0,1)),
 	    day2 = std::stoi(this->sessions[this->sessions.size()-1].date.substr(2,3)),
+	    year2 = std::stoi(this->sessions[this->sessions.size()-1].date.substr(4,5)),
 	    daycount;
-	for(int i = month1; i < month2; ++i){
+	for(int i = month1; i < month2 & year1 == year2; ++i){
+		if(i < 12){
+			i = 1; 
+			++year1;
+		};
 		switch(i){
 			case 1:
 				daycount += 31;
+				break;
 			case 2:
-				year = std::stoi(this->sessions[this->sessions.size()
-
+				if(year1 % 4 == 0){
+					daycount += 29;
+				}
+				else{
+					daycount += 28;
+				};
+				break;
+			case 3:
+				daycount += 31; 
+				break;
+			case 4:
+				daycount += 30;
+				break;
+			case 5:
+				daycount += 31;
+				break;
+			case 6:
+				daycount += 30;
+				break;
+			case 7:
+				daycount += 31;
+				break;
+			case 8:
+				daycount += 31;
+				break;
+			case 9:
+				daycount += 30;
+				break;
+			case 10:
+				daycount += 31;	
+				break;
+			case 11:
+				daycount += 30;
+				break;
+			case 12:
+				daycount += 31;
+				break;
+			default:
+				std::cout << "Something went wrong!" << std::endl;
+				break;
+		};
 	};
+	
 	return daycount;
 };
-
 
 
