@@ -6,9 +6,15 @@ std::vector<session> meso::get_sessions(){
 };
 
 void meso::append_session(session today){
-	this->sessions.push_back(today);
+	for(int i = 0; i < this->sessions.size(); ++i){
+		if(this->sessions[i].date.compare(today.date) == 0){
+			std::cout << "Session already exists! Edit Instead!" << std::endl;
+			return void(); 
+	};
+		this->sessions.push_back(today);
+	
 };
-
+};
 void meso::edit_session(std::string date, session ammend){
 	for(int i = 0; i < this->sessions.size(); ++i){
 		if(this->sessions[i].date.compare(date) == 0){
