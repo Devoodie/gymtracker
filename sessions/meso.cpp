@@ -79,7 +79,12 @@ int meso::get_length(){
 				break;
 		};
 	};
-	
+	if (day1 > day2){
+		daycount -= day1-day2;
+	}
+	else {
+		daycount += day1-day2;
+	};
 	return daycount;
 };
 
