@@ -25,6 +25,6 @@ class meso{
 	    int get_length();
 
 	    cycle get_cycle();
-	    void set_cycle();
+	    void set_cycle(cycle ammend);
 };
 

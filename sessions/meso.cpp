@@ -94,4 +94,10 @@ int meso::get_length(){
 	return daycount;
 };
 
+void meso::set_cycle(cycle ammend){
+	this->type = ammend;
+};
 
+cycle meso::get_cycle(){
+	return this-> type;
+};
